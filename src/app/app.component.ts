@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'fatec-ipi-sabado-primeiro-projeto-angular';
+  title = 'fatec-ipi-sabado-projeto-fatec';
 }

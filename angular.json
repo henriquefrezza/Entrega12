@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "fatec-ipi-sabado-primeiro-projeto-angular": {
+    "fatec-ipi-sabado-projeto-fatec": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/fatec-ipi-sabado-primeiro-projeto-angular",
+            "outputPath": "dist/fatec-ipi-sabado-projeto-fatec",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": []
           },
@@ -62,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "fatec-ipi-sabado-primeiro-projeto-angular:build"
+            "browserTarget": "fatec-ipi-sabado-projeto-fatec:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "fatec-ipi-sabado-primeiro-projeto-angular:build:production"
+              "browserTarget": "fatec-ipi-sabado-projeto-fatec:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "fatec-ipi-sabado-primeiro-projeto-angular:build"
+            "browserTarget": "fatec-ipi-sabado-projeto-fatec:build"
           }
         },
         "test": {
@@ -110,15 +111,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "fatec-ipi-sabado-primeiro-projeto-angular:serve"
+            "devServerTarget": "fatec-ipi-sabado-projeto-fatec:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "fatec-ipi-sabado-primeiro-projeto-angular:serve:production"
+              "devServerTarget": "fatec-ipi-sabado-projeto-fatec:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "fatec-ipi-sabado-primeiro-projeto-angular"
+    }
+  },
+  "defaultProject": "fatec-ipi-sabado-projeto-fatec",
+  "cli": {
+    "analytics": false
+  }
 }
